@@ -45,4 +45,5 @@ end
 # gem 'debugger', group: [:development, :test]
 #Additional by developer
 gem 'rspec-rails', group: [:development, :test]
-gem 'capybara', group: :test
+gem 'capybara', group: [:development, :test]
+
