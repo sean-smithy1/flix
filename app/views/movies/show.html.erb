@@ -1,0 +1,24 @@
+<article>
+  <header>
+    <h2><%= link_to(@movie.title, @movie) %></h2>
+  </header>
+    <p><%= @movie.description %></p>
+    <table>
+
+      <tr>
+        <td><b>Released:</b></td>
+        <td><%= format_release_date(@movie.released_on) %></td>
+      </tr>
+
+       <tr>
+        <td><b>Rating:</b></td>
+        <td><%= @movie.rating  %></td>
+      </tr>
+
+      <tr>
+        <td><b>Total Gross:</b></td>
+        <td><%= number_to_currency(@movie.total_gross) %></td>
+      </tr>
+
+    </table>
+</artical>

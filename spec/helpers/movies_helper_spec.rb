@@ -11,5 +11,19 @@ require 'spec_helper'
 #   end
 # end
 describe MoviesHelper do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  describe " Formats release date" do
+
+    date = Date.new(2008,05,23)
+
+    puts date.to_s
+
+    it "if exists to long" do
+      expect(helper.format_release_date(date)).to eq("May 23, 2008")
+
+      date=nil
+      expect(helper.format_release_date(date)).to eq("No release date for this movie")
+    end
+
+  end
 end
