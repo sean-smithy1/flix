@@ -13,13 +13,24 @@ class MoviesController < ApplicationController
   end
 
   def update
-# No need to use a @ as it's not used in the form, maybe safer?
+  # No need to use a @ as it's not used in the form, maybe safer?
     movie=Movie.find(params[:id])
     if movie.update(movie_params)
       flash[:notice] = "Movie successfully updated"
     end
     redirect_to movie
   end
+
+  def new
+    @movie=Movie.new
+  end
+
+  def create
+    @movie=Movie.new(movie_params)
+    @movie.save
+    redirect_to @movie
+  end
+
 
 private
   def movie_params
