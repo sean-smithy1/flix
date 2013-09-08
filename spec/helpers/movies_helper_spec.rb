@@ -16,13 +16,13 @@ describe MoviesHelper do
 
     date = Date.new(2008,05,23)
 
-    puts date.to_s
+    it " - exists" do
+      expect(helper.format_release_date(date)).to have_text("May 23, 2008")
+    end
 
-    it "if exists to long" do
-      expect(helper.format_release_date(date)).to eq("May 23, 2008")
-
+    it " - does not exist" do
       date=nil
-      expect(helper.format_release_date(date)).to eq("No release date for this movie")
+      expect(helper.format_release_date(date)).to have_text("No release date for this movie")
     end
 
   end

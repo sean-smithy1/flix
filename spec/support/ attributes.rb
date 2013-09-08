@@ -7,3 +7,4 @@ def movie_attributes(overrides = {})
     released_on: "2008-05-02"
   }.merge(overrides)
 end
+
