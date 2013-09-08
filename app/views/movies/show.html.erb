@@ -1,4 +1,8 @@
 <article>
+    <% if flash[:notice] %>
+      <div class="notice"><%= flash[:notice] %></div>
+    <% end %>
+
   <header>
     <h2><%= link_to(@movie.title, @movie) %></h2>
   </header>
@@ -24,3 +28,5 @@
 </artical>
 
 <%= link_to "All Movies", movies_path %>
+
+<%= link_to "Edit", edit_movie_path %>
