@@ -46,3 +46,4 @@ end
 #Additional by developer
 gem 'rspec-rails', group: [:development, :test]
 gem 'capybara', group: [:development, :test]
+gem 'bootstrap-sass'

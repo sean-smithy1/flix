@@ -1,6 +1,6 @@
-<h1><%= pluralize(@movies.length, 'Movie') %></h1>
+<p>There are <%= pluralize(@movies.length, 'Movie') %> in the database!</p>
 
-<%= link_to "Add Movie", new_movie_path %>
+<%= link_to "Add A Movie", new_movie_path %>
 
 <% @movies.each do |movie| %>
 <article>

@@ -1,3 +1,27 @@
 // Place all the styles related to the movies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+//Footer CSS
+#header_container h1 {
+  text-align:center;
+
+}
+
+#footer_container {
+  border-top-padding:10px;
+  border-top-width:2px;
+  border-top-style:dotted;
+  border-top-color:#ff9900;
+
+  margin-top:20px;
+  padding-top:20px;
+}
+
+#foot_nav li {
+  display: inline;
+  list-style-type: none;
+  padding-right: 20px;
+}
+
