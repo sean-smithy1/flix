@@ -9,10 +9,12 @@ module MoviesHelper
   end
 
   def format_total_gross(movie)
-    if movie.flop?
+    if movie.total_gross==nil
+      content_tag(:strong, 'Not Available')
+    elsif movie.flop?
       content_tag(:strong, 'Flop!')
     else
-      number_to_currency(movie.total_gross)
+        number_to_currency(movie.total_gross)
     end
   end
 

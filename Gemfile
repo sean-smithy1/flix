@@ -8,6 +8,7 @@ gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
+gem 'bootstrap-sass'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -46,4 +47,4 @@ end
 #Additional by developer
 gem 'rspec-rails', group: [:development, :test]
 gem 'capybara', group: [:development, :test]
-gem 'bootstrap-sass'
+
