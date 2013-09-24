@@ -8,23 +8,35 @@
   </header>
     <p><%= @movie.description %></p>
     <table>
-
       <tr>
         <td><b>Released:</b></td>
         <td><%= format_release_date(@movie.released_on) %></td>
       </tr>
-
        <tr>
         <td><b>Rating:</b></td>
         <td><%= @movie.rating  %></td>
       </tr>
-
       <tr>
         <td><b>Total Gross:</b></td>
         <td><%= format_total_gross(@movie) %></td>
       </tr>
-
-    </table>
+      <tr>
+        <td><b>Cast:</b></td>
+        <td><%= @movie.cast %></td>
+      </tr>
+      <tr>
+        <td><b>Director:</b></td>
+        <td><%= @movie.director %></td>
+      </tr>
+      <tr>
+        <td><b>Duration:</b></td>
+        <td><%= @movie.duration %></td>
+      </tr>
+      <tr>
+        <td><b>Image:</b></td>
+        <td><%= image_for(@movie) %></td>
+      </tr>
+  </table>
 </artical>
 
 <%= link_to "All Movies", movies_path %>
