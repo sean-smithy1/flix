@@ -25,5 +25,4 @@ module MoviesHelper
       image_tag(movie.image_file_name)
     end
   end
-
 end

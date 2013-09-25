@@ -4,7 +4,7 @@ describe "Creating a movie" do
   it "creates a blank form" do
 
     visit movies_url
-    click_link "Add Movie"
+    click_link ('Add New Movie')
 
     expect(current_path).to eq(new_movie_path)
 
