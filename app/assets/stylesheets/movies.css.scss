@@ -2,18 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import "colours";
 
 //Footer CSS
 #header_container h1 {
   text-align:center;
-
 }
 
 #footer_container {
   border-top-padding:10px;
   border-top-width:2px;
   border-top-style:dotted;
-  border-top-color:#ff9900;
+  border-top-color: $blue;
 
   margin-top:20px;
   padding-top:20px;
@@ -27,5 +27,33 @@
 
 #masthead {
   text-align:center;
+}
 
+#index_images {
+  float: left;
+  margin: 10px;
+}
+
+.clearfix{
+  clear: both;
+}
+
+/* FLASHES */
+
+.flash {
+  color: $primary-text-color;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: #ffc 0 0 4px;
+
+  &.notice {
+    background-color: $flash-notice-color;
+  }
+
+  &.alert {
+    background-color: $flash-alert-color;
+  }
 }

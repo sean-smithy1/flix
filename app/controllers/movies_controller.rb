@@ -16,9 +16,10 @@ class MoviesController < ApplicationController
   # No need to use a @ as it's not used in the form, maybe safer?
     movie=Movie.find(params[:id])
     if movie.update(movie_params)
-      flash[:notice] = "Movie successfully updated"
+      redirect_to movie, notice: "Movie successfully updated"
+    else
+      render :edit
     end
-    redirect_to movie
   end
 
   def new
@@ -27,14 +28,17 @@ class MoviesController < ApplicationController
 
   def create
     @movie=Movie.new(movie_params)
-    @movie.save
-    redirect_to @movie
+    if @movie.save
+      redirect_to @movie, notice: "Movie successfully created!"
+    else
+      render :new
+    end
   end
 
   def destroy
     movie = Movie.find(params[:id])
     movie.destroy
-    redirect_to movies_path
+    redirect_to movies_path, alert: "Movie successfully deleted!"
   end
 
 

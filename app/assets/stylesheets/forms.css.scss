@@ -1,0 +1,10 @@
+@import "colours";
+
+div.field_with_errors {
+    label {
+      color: $errors-text-color;
+    }
+    input, textarea {
+      background: $errors-background-color;
+    }
+  }

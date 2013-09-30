@@ -1,10 +1,14 @@
 <% @movies.each do |movie| %>
   <article>
-    <header>
-      <%= image_for(movie) %>
+    <header class="clearfix">
       <h2><%= link_to movie.title, movie %></h2>
       <h3><%= movie.cast %></h3>
     </header>
+
+    <div id="index_images">
+      <%= image_for(movie) %>
+    </div>
+
     <p>
       <%= truncate(movie.description, length: 40, separator: ' ') %>
     </p>
@@ -29,6 +33,7 @@
         <td><%= format_total_gross(movie) %></td>
       </tr>
     </table>
+
   </article>
 <% end %>
 
