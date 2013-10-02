@@ -1,5 +1,4 @@
 Flix::Application.routes.draw do
-  resources :reviews
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -56,7 +55,9 @@ Flix::Application.routes.draw do
   #     resources :products
   #   end
   root 'movies#index'
-  resources :movies
+  resources :movies do
+    resources :reviews
+  end
 
   # get 'movies' => 'movies#index'
   # get 'movies/:id' => 'movies#show', as: :movie
