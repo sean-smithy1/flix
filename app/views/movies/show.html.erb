@@ -35,6 +35,16 @@
   </table>
 </artical>
 
-<%= link_to "Edit", edit_movie_path %>
-
-<%= link_to "Delete", @movie, method: :delete, data: { confirm: "Are you sure?" } %>
+<div id="show_menu">
+  <ul>
+    <li>
+      <%= link_to "Edit", edit_movie_path %>
+    </li>
+    <li>
+      <%= link_to "Delete", @movie, method: :delete, data: { confirm: "Are you sure?" } %>
+    </li>
+    <li>
+      <%= link_to "Reviews", movie_reviews_path(@movie) %>
+    </li>
+  </ul>
+</div>

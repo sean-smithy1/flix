@@ -32,6 +32,11 @@
         <th>Total Gross:</th>
         <td><%= format_total_gross(movie) %></td>
       </tr>
+     <tr>
+        <td><%= link_to "Reviews", movie_reviews_path(movie) %></td>
+      </tr>
+
+
     </table>
 
   </article>
